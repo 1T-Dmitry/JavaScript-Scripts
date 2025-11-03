@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шифрование и дешифрование текста</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Шифрование и дешифрование текста</h1>
+            <p>Используйте различные алгоритмы для защиты ваших сообщений</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <div class="algorithm-selector">
+                    <label for="algorithm">Выберите алгоритм:</label>
+                    <select id="algorithm">
+                        <option value="caesar">Шифр Цезаря</option>
+                        <option value="atbash">Атбаш</option>
+                        <option value="reverse">Обратный текст</option>
+                        <option value="vigenere">Шифр Виженера</option>
+                    </select>
+                </div>
+
+                <div class="key-input" id="key-section">
+                    <label for="key">Ключ шифрования:</label>
+                    <input type="text" id="key" placeholder="Введите ключ">
+                </div>
+
+                <div class="text-input">
+                    <label for="text-input">Введите текст:</label>
+                    <textarea id="text-input" placeholder="Введите текст для шифрования или дешифрования..."></textarea>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="encrypt-btn">Зашифровать</button>
+                    <button id="decrypt-btn">Расшифровать</button>
+                    <button id="clear-btn">Очистить</button>
+                </div>
+            </div>
+
+            <div class="result-section">
+                <h2>Результат:</h2>
+                <div class="result-box" id="result-output">
+                    <p>Здесь появится результат...</p>
+                </div>
+                <button id="save-btn">Сохранить результат</button>
+            </div>
+
+            <div class="saved-messages">
+                <h2>Сохранённые сообщения</h2>
+                <div class="messages-list" id="messages-list">
+                    <p class="no-messages">Нет сохранённых сообщений</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
